@@ -26,7 +26,8 @@
     "@nestjs/schedule": "^4.0.0",
     "@stellar/stellar-sdk": "^11.1.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "stellar-sdk": "^11.1.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
