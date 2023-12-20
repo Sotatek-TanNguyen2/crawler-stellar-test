@@ -28,7 +28,6 @@
     "fs": "^0.0.1-security",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "soroban-client": "^1.0.0",
     "stellar-sdk": "^11.1.0"
   },
   "devDependencies": {
