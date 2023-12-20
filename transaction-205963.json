@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "_links": {
+        "self": {
+          "href": "https://horizon-futurenet.stellar.org/transactions/1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c"
+        },
+        "account": {
+          "href": "https://horizon-futurenet.stellar.org/accounts/GDBKWGXKKX3EOS7IBB6NUAEZIKZGHSUWZQWJV3RZO3OWQZFXGRXXQVHP"
+        },
+        "ledger": {
+          "href": "https://horizon-futurenet.stellar.org/ledgers/205963"
+        },
+        "operations": {
+          "href": "https://horizon-futurenet.stellar.org/transactions/1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c/operations{?cursor,limit,order}",
+          "templated": true
+        },
+        "effects": {
+          "href": "https://horizon-futurenet.stellar.org/transactions/1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c/effects{?cursor,limit,order}",
+          "templated": true
+        },
+        "precedes": {
+          "href": "https://horizon-futurenet.stellar.org/transactions?order=asc&cursor=884604349190144"
+        },
+        "succeeds": {
+          "href": "https://horizon-futurenet.stellar.org/transactions?order=desc&cursor=884604349190144"
+        },
+        "transaction": {
+          "href": "https://horizon-futurenet.stellar.org/transactions/1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c"
+        }
+      },
+      "id": "1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c",
+      "paging_token": "884604349190144",
+      "successful": true,
+      "hash": "1b66aa1395d3c04c765a4094e0801b0b47f4b659ace17f75c6bf368d0e49614c",
+      "created_at": "2023-12-20T09:04:49Z",
+      "source_account": "GDBKWGXKKX3EOS7IBB6NUAEZIKZGHSUWZQWJV3RZO3OWQZFXGRXXQVHP",
+      "source_account_sequence": "531798555623427",
+      "fee_account": "GDBKWGXKKX3EOS7IBB6NUAEZIKZGHSUWZQWJV3RZO3OWQZFXGRXXQVHP",
+      "fee_charged": "45941",
+      "max_fee": "45941",
+      "operation_count": 1,
+      "envelope_xdr": "AAAAAgAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAs3UAAeOrAAAAAwAAAAEAAAAAAAAAAAAAAABlgq9XAAAAAAAAAAEAAAAAAAAAGAAAAAAAAAABdRiNiuZUxJg/WfOn9Z3SYmXdUXcR1Xcxen2KryOGon0AAAAFaGVsbG8AAAAAAAABAAAADwAAAAV3b3JsZAAAAAAAAAAAAAABAAAAAAAAAAIAAAAGAAAAAXUYjYrmVMSYP1nzp/Wd0mJl3VF3EdV3MXp9iq8jhqJ9AAAAFAAAAAEAAAAHUq18j+4NqrGpTiDCfvX17cirSlTqlfL6AHv81KmSMhAAAAAAADqamQAAAzAAAAAAAAAAAAAAsxEAAAABtzRveAAAAEAI0J4ftDXHk3ybV++qPTHE3F1KjGT833hSjYTpQX7qfah3UIPuJXV8pvucs+vNQWo+DqLYcVj4hNahElkq4OkJ",
+      "result_xdr": "AAAAAAAAs3UAAAAAAAAAAQAAAAAAAAAYAAAAADpU7guLkAxroQ002lwcRYcb3YFzl4OMpV/q0T0CcGzkAAAAAA==",
+      "result_meta_xdr": "AAAAAwAAAAAAAAACAAAAAwADJIsAAAAAAAAAAMKrGupV9kdL6Ah82gCZQrJjypbMLJruOXbdaGS3NG94AAAAAlQJ0zMAAeOrAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAMAAAAAAAMkWQAAAABlgq0uAAAAAAAAAAEAAySLAAAAAAAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAAAJUCdMzAAHjqwAAAAMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAADAAAAAAADJIsAAAAAZYKuMQAAAAAAAAABAAAAAAAAAAIAAAADAAMkiwAAAAAAAAAAwqsa6lX2R0voCHzaAJlCsmPKlswsmu45dt1oZLc0b3gAAAACVAnTMwAB46sAAAADAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAwAAAAAAAySLAAAAAGWCrjEAAAAAAAAAAQADJIsAAAAAAAAAAMKrGupV9kdL6Ah82gCZQrJjypbMLJruOXbdaGS3NG94AAAAAlQJ1/wAAeOrAAAAAwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAMAAAAAAAMkiwAAAABlgq4xAAAAAAAAAAEAAAAAAAAAAAAAABAAAAABAAAAAgAAAA8AAAAFSGVsbG8AAAAAAAAPAAAABXdvcmxkAAAAAAAAAA==",
+      "fee_meta_xdr": "AAAAAgAAAAMAAyRZAAAAAAAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAAAJUCoaoAAHjqwAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAADAAAAAAADJFkAAAAAZYKtLgAAAAAAAAABAAMkiwAAAAAAAAAAwqsa6lX2R0voCHzaAJlCsmPKlswsmu45dt1oZLc0b3gAAAACVAnTMwAB46sAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAwAAAAAAAyRZAAAAAGWCrS4AAAAA",
+      "memo_type": "none",
+      "signatures": [
+        "CNCeH7Q1x5N8m1fvqj0xxNxdSoxk/N94Uo2E6UF+6n2od1CD7iV1fKb7nLPrzUFqPg6i2HFY+ITWoRJZKuDpCQ=="
+      ],
+      "valid_after": "1970-01-01T00:00:00Z",
+      "valid_before": "2023-12-20T09:09:43Z",
+      "preconditions": {
+        "timebounds": { "min_time": "0", "max_time": "1703063383" }
+      },
+      "ledger_attr": 205963
+    }
+  ]
+}
