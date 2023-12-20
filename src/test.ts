@@ -1,16 +1,11 @@
-import fs from 'fs';
-
 import {
-  TransactionBuilder,
-  Keypair,
-  Server,
-  Networks,
-  Operation,
   Contract,
-  Asset,
-  Memo,
+  Keypair,
+  Networks,
+  SorobanRpc,
+  TransactionBuilder,
   xdr,
-} from 'soroban-client';
+} from '@stellar/stellar-sdk';
 
 // The source account is the account we will be signing and sending from.
 const sourceKeypair = Keypair.fromSecret(
@@ -20,7 +15,7 @@ const sourceKeypair = Keypair.fromSecret(
 
 // Configure SorobanClient to talk to the soroban-rpc instance running on your
 // local machine.
-const server = new Server('https://rpc-futurenet.stellar.org:443', {
+const server = new SorobanRpc.Server('https://rpc-futurenet.stellar.org:443', {
   allowHttp: true,
 });
 
