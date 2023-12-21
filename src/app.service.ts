@@ -1,6 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Timeout } from '@nestjs/schedule';
-// import StellarSdk from 'stellar-sdk';
 import {
   Contract,
   Horizon,
@@ -10,8 +9,6 @@ import {
   TransactionBuilder,
   xdr,
 } from '@stellar/stellar-sdk';
-// const StellarSdk = require('@stellar/stellar-sdk');
-// const StellarSdk = require('stellar-sdk');
 
 const HORIZON_RPC = 'https://horizon-testnet.stellar.org';
 const HORIZON_FUTURE = 'https://horizon-futurenet.stellar.org';
@@ -69,7 +66,10 @@ export class AppService {
     );
     this.logger.log(JSON.stringify(resultMeta));
 
-    const feeMeta = xdr.Transaction.fromXDR(xdr_encoded.fee_meta_xdr, 'base64');
+    const feeMeta = xdr.TransactionMetaV1.fromXDR(
+      xdr_encoded.fee_meta_xdr,
+      'base64',
+    );
     this.logger.log(JSON.stringify(feeMeta));
   }
 
