@@ -34,8 +34,43 @@ export class AppService {
     this.sorobanServer = new SorobanRpc.Server(FUTURE_RPC, {
       allowHttp: true,
     });
-    this.currentLedger = 172717;
+    // this.currentLedger = 172717;
+    this.currentLedger = 205900;
     this.blockPerJob = 20;
+  }
+
+  @Timeout(0)
+  async decodeXdr() {
+    const xdr_encoded = {
+      envelope_xdr:
+        'AAAAAgAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAs3UAAeOrAAAAAwAAAAEAAAAAAAAAAAAAAABlgq9XAAAAAAAAAAEAAAAAAAAAGAAAAAAAAAABdRiNiuZUxJg/WfOn9Z3SYmXdUXcR1Xcxen2KryOGon0AAAAFaGVsbG8AAAAAAAABAAAADwAAAAV3b3JsZAAAAAAAAAAAAAABAAAAAAAAAAIAAAAGAAAAAXUYjYrmVMSYP1nzp/Wd0mJl3VF3EdV3MXp9iq8jhqJ9AAAAFAAAAAEAAAAHUq18j+4NqrGpTiDCfvX17cirSlTqlfL6AHv81KmSMhAAAAAAADqamQAAAzAAAAAAAAAAAAAAsxEAAAABtzRveAAAAEAI0J4ftDXHk3ybV++qPTHE3F1KjGT833hSjYTpQX7qfah3UIPuJXV8pvucs+vNQWo+DqLYcVj4hNahElkq4OkJ',
+      result_xdr:
+        'AAAAAAAAs3UAAAAAAAAAAQAAAAAAAAAYAAAAADpU7guLkAxroQ002lwcRYcb3YFzl4OMpV/q0T0CcGzkAAAAAA==',
+      result_meta_xdr:
+        'AAAAAwAAAAAAAAACAAAAAwADJIsAAAAAAAAAAMKrGupV9kdL6Ah82gCZQrJjypbMLJruOXbdaGS3NG94AAAAAlQJ0zMAAeOrAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAMAAAAAAAMkWQAAAABlgq0uAAAAAAAAAAEAAySLAAAAAAAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAAAJUCdMzAAHjqwAAAAMAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAADAAAAAAADJIsAAAAAZYKuMQAAAAAAAAABAAAAAAAAAAIAAAADAAMkiwAAAAAAAAAAwqsa6lX2R0voCHzaAJlCsmPKlswsmu45dt1oZLc0b3gAAAACVAnTMwAB46sAAAADAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAwAAAAAAAySLAAAAAGWCrjEAAAAAAAAAAQADJIsAAAAAAAAAAMKrGupV9kdL6Ah82gCZQrJjypbMLJruOXbdaGS3NG94AAAAAlQJ1/wAAeOrAAAAAwAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAMAAAAAAAMkiwAAAABlgq4xAAAAAAAAAAEAAAAAAAAAAAAAABAAAAABAAAAAgAAAA8AAAAFSGVsbG8AAAAAAAAPAAAABXdvcmxkAAAAAAAAAA==',
+      fee_meta_xdr:
+        'AAAAAgAAAAMAAyRZAAAAAAAAAADCqxrqVfZHS+gIfNoAmUKyY8qWzCya7jl23WhktzRveAAAAAJUCoaoAAHjqwAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAADAAAAAAADJFkAAAAAZYKtLgAAAAAAAAABAAMkiwAAAAAAAAAAwqsa6lX2R0voCHzaAJlCsmPKlswsmu45dt1oZLc0b3gAAAACVAnTMwAB46sAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAwAAAAAAAyRZAAAAAGWCrS4AAAAA',
+    };
+    const envelope = xdr.TransactionEnvelope.fromXDR(
+      xdr_encoded.envelope_xdr,
+      'base64',
+    );
+    this.logger.log(JSON.stringify(envelope));
+
+    const result = xdr.TransactionResult.fromXDR(
+      xdr_encoded.result_xdr,
+      'base64',
+    );
+    this.logger.log(JSON.stringify(result));
+
+    const resultMeta = xdr.TransactionMeta.fromXDR(
+      xdr_encoded.result_meta_xdr,
+      'base64',
+    );
+    this.logger.log(JSON.stringify(resultMeta));
+
+    const feeMeta = xdr.Transaction.fromXDR(xdr_encoded.fee_meta_xdr, 'base64');
+    this.logger.log(JSON.stringify(feeMeta));
   }
 
   // @Timeout(0)
@@ -111,11 +146,9 @@ export class AppService {
   //   try {
   //     const data = await this.horizonServer
   //       .transactions()
-  //       .forLedger(190239)
+  //       .forLedger(205963)
   //       .call();
   //     this.logger.log(JSON.stringify(data));
-  //     // const filename = `./data/${Date.now()}.json`;
-  //     // fs.writeFileSync(filename, JSON.stringify(data));
   //   } catch (error) {
   //     this.logger.error(error);
   //   }

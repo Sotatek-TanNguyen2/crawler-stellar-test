@@ -1,0 +1,582 @@
+{
+  "envelope": {
+    "_switch": { "name": "envelopeTypeTx", "value": 2 },
+    "_arm": "v1",
+    "_value": {
+      "_attributes": {
+        "tx": {
+          "_attributes": {
+            "sourceAccount": {
+              "_switch": { "name": "keyTypeEd25519", "value": 0 },
+              "_arm": "ed25519",
+              "_armType": { "_length": 32 },
+              "_value": {
+                "type": "Buffer",
+                "data": [
+                  194, 171, 26, 234, 85, 246, 71, 75, 232, 8, 124, 218, 0, 153,
+                  66, 178, 99, 202, 150, 204, 44, 154, 238, 57, 118, 221, 104,
+                  100, 183, 52, 111, 120
+                ]
+              }
+            },
+            "fee": 45941,
+            "seqNum": { "_value": "531798555623427" },
+            "cond": {
+              "_switch": { "name": "precondTime", "value": 1 },
+              "_arm": "timeBounds",
+              "_value": {
+                "_attributes": {
+                  "minTime": { "_value": "0" },
+                  "maxTime": { "_value": "1703063383" }
+                }
+              }
+            },
+            "memo": { "_switch": { "name": "memoNone", "value": 0 } },
+            "operations": [
+              {
+                "_attributes": {
+                  "body": {
+                    "_switch": { "name": "invokeHostFunction", "value": 24 },
+                    "_arm": "invokeHostFunctionOp",
+                    "_value": {
+                      "_attributes": {
+                        "hostFunction": {
+                          "_switch": {
+                            "name": "hostFunctionTypeInvokeContract",
+                            "value": 0
+                          },
+                          "_arm": "invokeContract",
+                          "_value": {
+                            "_attributes": {
+                              "contractAddress": {
+                                "_switch": {
+                                  "name": "scAddressTypeContract",
+                                  "value": 1
+                                },
+                                "_arm": "contractId",
+                                "_armType": { "_length": 32 },
+                                "_value": {
+                                  "type": "Buffer",
+                                  "data": [
+                                    117, 24, 141, 138, 230, 84, 196, 152, 63,
+                                    89, 243, 167, 245, 157, 210, 98, 101, 221,
+                                    81, 119, 17, 213, 119, 49, 122, 125, 138,
+                                    175, 35, 134, 162, 125
+                                  ]
+                                }
+                              },
+                              "functionName": {
+                                "type": "Buffer",
+                                "data": [104, 101, 108, 108, 111]
+                              },
+                              "args": [
+                                {
+                                  "_switch": {
+                                    "name": "scvSymbol",
+                                    "value": 15
+                                  },
+                                  "_arm": "sym",
+                                  "_armType": { "_maxLength": 32 },
+                                  "_value": {
+                                    "type": "Buffer",
+                                    "data": [119, 111, 114, 108, 100]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "auth": []
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "ext": {
+              "_switch": 1,
+              "_arm": "sorobanData",
+              "_value": {
+                "_attributes": {
+                  "ext": { "_switch": 0 },
+                  "resources": {
+                    "_attributes": {
+                      "footprint": {
+                        "_attributes": {
+                          "readOnly": [
+                            {
+                              "_switch": { "name": "contractData", "value": 6 },
+                              "_arm": "contractData",
+                              "_value": {
+                                "_attributes": {
+                                  "contract": {
+                                    "_switch": {
+                                      "name": "scAddressTypeContract",
+                                      "value": 1
+                                    },
+                                    "_arm": "contractId",
+                                    "_armType": { "_length": 32 },
+                                    "_value": {
+                                      "type": "Buffer",
+                                      "data": [
+                                        117, 24, 141, 138, 230, 84, 196, 152,
+                                        63, 89, 243, 167, 245, 157, 210, 98,
+                                        101, 221, 81, 119, 17, 213, 119, 49,
+                                        122, 125, 138, 175, 35, 134, 162, 125
+                                      ]
+                                    }
+                                  },
+                                  "key": {
+                                    "_switch": {
+                                      "name": "scvLedgerKeyContractInstance",
+                                      "value": 20
+                                    }
+                                  },
+                                  "durability": {
+                                    "name": "persistent",
+                                    "value": 1
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "_switch": { "name": "contractCode", "value": 7 },
+                              "_arm": "contractCode",
+                              "_value": {
+                                "_attributes": {
+                                  "hash": {
+                                    "type": "Buffer",
+                                    "data": [
+                                      82, 173, 124, 143, 238, 13, 170, 177, 169,
+                                      78, 32, 194, 126, 245, 245, 237, 200, 171,
+                                      74, 84, 234, 149, 242, 250, 0, 123, 252,
+                                      212, 169, 146, 50, 16
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "readWrite": []
+                        }
+                      },
+                      "instructions": 3840665,
+                      "readBytes": 816,
+                      "writeBytes": 0
+                    }
+                  },
+                  "resourceFee": { "_value": "45841" }
+                }
+              }
+            }
+          }
+        },
+        "signatures": [
+          {
+            "_attributes": {
+              "hint": { "type": "Buffer", "data": [183, 52, 111, 120] },
+              "signature": {
+                "type": "Buffer",
+                "data": [
+                  8, 208, 158, 31, 180, 53, 199, 147, 124, 155, 87, 239, 170,
+                  61, 49, 196, 220, 93, 74, 140, 100, 252, 223, 120, 82, 141,
+                  132, 233, 65, 126, 234, 125, 168, 119, 80, 131, 238, 37, 117,
+                  124, 166, 251, 156, 179, 235, 205, 65, 106, 62, 14, 162, 216,
+                  113, 88, 248, 132, 214, 161, 18, 89, 42, 224, 233, 9
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "result": {
+    "_attributes": {
+      "feeCharged": { "_value": "45941" },
+      "result": {
+        "_switch": { "name": "txSuccess", "value": 0 },
+        "_arm": "results",
+        "_armType": { "_maxLength": 2147483647 },
+        "_value": [
+          {
+            "_switch": { "name": "opInner", "value": 0 },
+            "_arm": "tr",
+            "_value": {
+              "_switch": { "name": "invokeHostFunction", "value": 24 },
+              "_arm": "invokeHostFunctionResult",
+              "_value": {
+                "_switch": { "name": "invokeHostFunctionSuccess", "value": 0 },
+                "_arm": "success",
+                "_armType": { "_length": 32 },
+                "_value": {
+                  "type": "Buffer",
+                  "data": [
+                    58, 84, 238, 11, 139, 144, 12, 107, 161, 13, 52, 218, 92,
+                    28, 69, 135, 27, 221, 129, 115, 151, 131, 140, 165, 95, 234,
+                    209, 61, 2, 112, 108, 228
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ext": { "_switch": 0 }
+    }
+  },
+  "resultMeta": {
+    "_switch": 3,
+    "_arm": "v3",
+    "_value": {
+      "_attributes": {
+        "ext": { "_switch": 0 },
+        "txChangesBefore": [
+          {
+            "_switch": { "name": "ledgerEntryState", "value": 3 },
+            "_arm": "state",
+            "_value": {
+              "_attributes": {
+                "lastModifiedLedgerSeq": 205963,
+                "data": {
+                  "_switch": { "name": "account", "value": 0 },
+                  "_arm": "account",
+                  "_value": {
+                    "_attributes": {
+                      "accountId": {
+                        "_switch": {
+                          "name": "publicKeyTypeEd25519",
+                          "value": 0
+                        },
+                        "_arm": "ed25519",
+                        "_armType": { "_length": 32 },
+                        "_value": {
+                          "type": "Buffer",
+                          "data": [
+                            194, 171, 26, 234, 85, 246, 71, 75, 232, 8, 124,
+                            218, 0, 153, 66, 178, 99, 202, 150, 204, 44, 154,
+                            238, 57, 118, 221, 104, 100, 183, 52, 111, 120
+                          ]
+                        }
+                      },
+                      "balance": { "_value": "9999864627" },
+                      "seqNum": { "_value": "531798555623426" },
+                      "numSubEntries": 0,
+                      "flags": 0,
+                      "homeDomain": { "type": "Buffer", "data": [] },
+                      "thresholds": { "type": "Buffer", "data": [1, 0, 0, 0] },
+                      "signers": [],
+                      "ext": {
+                        "_switch": 1,
+                        "_arm": "v1",
+                        "_value": {
+                          "_attributes": {
+                            "liabilities": {
+                              "_attributes": {
+                                "buying": { "_value": "0" },
+                                "selling": { "_value": "0" }
+                              }
+                            },
+                            "ext": {
+                              "_switch": 2,
+                              "_arm": "v2",
+                              "_value": {
+                                "_attributes": {
+                                  "numSponsored": 0,
+                                  "numSponsoring": 0,
+                                  "signerSponsoringIDs": [],
+                                  "ext": {
+                                    "_switch": 3,
+                                    "_arm": "v3",
+                                    "_value": {
+                                      "_attributes": {
+                                        "ext": { "_switch": 0 },
+                                        "seqLedger": 205913,
+                                        "seqTime": { "_value": "1703062830" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "ext": { "_switch": 0 }
+              }
+            }
+          },
+          {
+            "_switch": { "name": "ledgerEntryUpdated", "value": 1 },
+            "_arm": "updated",
+            "_value": {
+              "_attributes": {
+                "lastModifiedLedgerSeq": 205963,
+                "data": {
+                  "_switch": { "name": "account", "value": 0 },
+                  "_arm": "account",
+                  "_value": {
+                    "_attributes": {
+                      "accountId": {
+                        "_switch": {
+                          "name": "publicKeyTypeEd25519",
+                          "value": 0
+                        },
+                        "_arm": "ed25519",
+                        "_armType": { "_length": 32 },
+                        "_value": {
+                          "type": "Buffer",
+                          "data": [
+                            194, 171, 26, 234, 85, 246, 71, 75, 232, 8, 124,
+                            218, 0, 153, 66, 178, 99, 202, 150, 204, 44, 154,
+                            238, 57, 118, 221, 104, 100, 183, 52, 111, 120
+                          ]
+                        }
+                      },
+                      "balance": { "_value": "9999864627" },
+                      "seqNum": { "_value": "531798555623427" },
+                      "numSubEntries": 0,
+                      "flags": 0,
+                      "homeDomain": { "type": "Buffer", "data": [] },
+                      "thresholds": { "type": "Buffer", "data": [1, 0, 0, 0] },
+                      "signers": [],
+                      "ext": {
+                        "_switch": 1,
+                        "_arm": "v1",
+                        "_value": {
+                          "_attributes": {
+                            "liabilities": {
+                              "_attributes": {
+                                "buying": { "_value": "0" },
+                                "selling": { "_value": "0" }
+                              }
+                            },
+                            "ext": {
+                              "_switch": 2,
+                              "_arm": "v2",
+                              "_value": {
+                                "_attributes": {
+                                  "numSponsored": 0,
+                                  "numSponsoring": 0,
+                                  "signerSponsoringIDs": [],
+                                  "ext": {
+                                    "_switch": 3,
+                                    "_arm": "v3",
+                                    "_value": {
+                                      "_attributes": {
+                                        "ext": { "_switch": 0 },
+                                        "seqLedger": 205963,
+                                        "seqTime": { "_value": "1703063089" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "ext": { "_switch": 0 }
+              }
+            }
+          }
+        ],
+        "operations": [{ "_attributes": { "changes": [] } }],
+        "txChangesAfter": [
+          {
+            "_switch": { "name": "ledgerEntryState", "value": 3 },
+            "_arm": "state",
+            "_value": {
+              "_attributes": {
+                "lastModifiedLedgerSeq": 205963,
+                "data": {
+                  "_switch": { "name": "account", "value": 0 },
+                  "_arm": "account",
+                  "_value": {
+                    "_attributes": {
+                      "accountId": {
+                        "_switch": {
+                          "name": "publicKeyTypeEd25519",
+                          "value": 0
+                        },
+                        "_arm": "ed25519",
+                        "_armType": { "_length": 32 },
+                        "_value": {
+                          "type": "Buffer",
+                          "data": [
+                            194, 171, 26, 234, 85, 246, 71, 75, 232, 8, 124,
+                            218, 0, 153, 66, 178, 99, 202, 150, 204, 44, 154,
+                            238, 57, 118, 221, 104, 100, 183, 52, 111, 120
+                          ]
+                        }
+                      },
+                      "balance": { "_value": "9999864627" },
+                      "seqNum": { "_value": "531798555623427" },
+                      "numSubEntries": 0,
+                      "flags": 0,
+                      "homeDomain": { "type": "Buffer", "data": [] },
+                      "thresholds": { "type": "Buffer", "data": [1, 0, 0, 0] },
+                      "signers": [],
+                      "ext": {
+                        "_switch": 1,
+                        "_arm": "v1",
+                        "_value": {
+                          "_attributes": {
+                            "liabilities": {
+                              "_attributes": {
+                                "buying": { "_value": "0" },
+                                "selling": { "_value": "0" }
+                              }
+                            },
+                            "ext": {
+                              "_switch": 2,
+                              "_arm": "v2",
+                              "_value": {
+                                "_attributes": {
+                                  "numSponsored": 0,
+                                  "numSponsoring": 0,
+                                  "signerSponsoringIDs": [],
+                                  "ext": {
+                                    "_switch": 3,
+                                    "_arm": "v3",
+                                    "_value": {
+                                      "_attributes": {
+                                        "ext": { "_switch": 0 },
+                                        "seqLedger": 205963,
+                                        "seqTime": { "_value": "1703063089" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "ext": { "_switch": 0 }
+              }
+            }
+          },
+          {
+            "_switch": { "name": "ledgerEntryUpdated", "value": 1 },
+            "_arm": "updated",
+            "_value": {
+              "_attributes": {
+                "lastModifiedLedgerSeq": 205963,
+                "data": {
+                  "_switch": { "name": "account", "value": 0 },
+                  "_arm": "account",
+                  "_value": {
+                    "_attributes": {
+                      "accountId": {
+                        "_switch": {
+                          "name": "publicKeyTypeEd25519",
+                          "value": 0
+                        },
+                        "_arm": "ed25519",
+                        "_armType": { "_length": 32 },
+                        "_value": {
+                          "type": "Buffer",
+                          "data": [
+                            194, 171, 26, 234, 85, 246, 71, 75, 232, 8, 124,
+                            218, 0, 153, 66, 178, 99, 202, 150, 204, 44, 154,
+                            238, 57, 118, 221, 104, 100, 183, 52, 111, 120
+                          ]
+                        }
+                      },
+                      "balance": { "_value": "9999865852" },
+                      "seqNum": { "_value": "531798555623427" },
+                      "numSubEntries": 0,
+                      "flags": 0,
+                      "homeDomain": { "type": "Buffer", "data": [] },
+                      "thresholds": { "type": "Buffer", "data": [1, 0, 0, 0] },
+                      "signers": [],
+                      "ext": {
+                        "_switch": 1,
+                        "_arm": "v1",
+                        "_value": {
+                          "_attributes": {
+                            "liabilities": {
+                              "_attributes": {
+                                "buying": { "_value": "0" },
+                                "selling": { "_value": "0" }
+                              }
+                            },
+                            "ext": {
+                              "_switch": 2,
+                              "_arm": "v2",
+                              "_value": {
+                                "_attributes": {
+                                  "numSponsored": 0,
+                                  "numSponsoring": 0,
+                                  "signerSponsoringIDs": [],
+                                  "ext": {
+                                    "_switch": 3,
+                                    "_arm": "v3",
+                                    "_value": {
+                                      "_attributes": {
+                                        "ext": { "_switch": 0 },
+                                        "seqLedger": 205963,
+                                        "seqTime": { "_value": "1703063089" }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "ext": { "_switch": 0 }
+              }
+            }
+          }
+        ],
+        "sorobanMeta": {
+          "_attributes": {
+            "ext": { "_switch": 0 },
+            "events": [],
+            "returnValue": {
+              "_switch": { "name": "scvVec", "value": 16 },
+              "_arm": "vec",
+              "_armType": { "_childType": { "_maxLength": 2147483647 } },
+              "_value": [
+                {
+                  "_switch": { "name": "scvSymbol", "value": 15 },
+                  "_arm": "sym",
+                  "_armType": { "_maxLength": 32 },
+                  "_value": {
+                    "type": "Buffer",
+                    "data": [72, 101, 108, 108, 111]
+                  }
+                },
+                {
+                  "_switch": { "name": "scvSymbol", "value": 15 },
+                  "_arm": "sym",
+                  "_armType": { "_maxLength": 32 },
+                  "_value": {
+                    "type": "Buffer",
+                    "data": [119, 111, 114, 108, 100]
+                  }
+                }
+              ]
+            },
+            "diagnosticEvents": []
+          }
+        }
+      }
+    }
+  }
+}
