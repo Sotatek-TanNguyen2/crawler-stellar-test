@@ -174,7 +174,6 @@ export class AppService {
       const data = await this.horizonServer
         .transactions()
         .forLedger(205963)
-        .cursor('now')
         .call();
       this.logger.log(JSON.stringify(data));
     } catch (error) {
